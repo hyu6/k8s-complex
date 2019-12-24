@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: hyux-dev-tls
+spec:
+  secretName: hyux-dev
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: hyux.dev
+  dnsNames:
+    - hyux.dev
+    - www.hyux.dev
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - hyux.dev
+          - www.hyux.dev
