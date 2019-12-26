@@ -1,3 +1,3 @@
-# k8s-complex
+# multi-k8s
 
-A multi-container Fibonacci number calculator using React, Express, Redis, and Postgres.
+A Kubernetes multi-container Fibonacci calculation system based on Nginx, Ingress, React, Express, Redis, and Postgres.
